@@ -1,0 +1,88 @@
+body{
+	font-family: 'Roboto', sans-serif;
+	/*background: blue;*/
+	background: #085078;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #85D8CE, #085078);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #85D8CE, #085078); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+div{
+	width:350px;
+	/*border:1px solid black;*/
+	margin:0 auto;
+	padding-top: 80px;
+}
+h1{
+	color: purple;
+	background-color: #2980b9;
+	padding-left:20px;
+	font-weight: 400;
+	font-size: 25px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin:0;
+}
+h1 i{
+	padding-right: 20px;
+	float:right;
+}
+ul{
+	padding:0; 
+	margin:0;
+}
+input{
+	background: #f7f7f7;
+	font-size:20px;
+	width:100%;
+	padding: 0 0 0 20px;
+	margin:0;
+	box-sizing: border-box;	
+	height:40px;
+	border-radius: 0;
+	border:0;
+}
+input:focus{
+	background: #fff;
+	outline:none;
+	border:2px solid #2980b9;
+}
+li span i{
+	width:0px;
+	color: white;
+	opacity:0;
+	height: 93%;
+	/*box-sizing: border-box;*/
+}
+ul li{
+	list-style: none;
+	font-size: 20px;
+	background: #fff;
+	width:100%;
+	padding: 0;
+	margin:0;
+	box-sizing: border-box;
+	height:40px;
+
+}
+li:nth-of-type(2n){
+	background:#f7f7f7;
+}
+
+/*For toggling through JS*/
+.shading{
+	text-decoration: line-through;
+	color:rgb(57, 57, 57);
+}
+li:hover span i{
+	width:20px;
+	opacity:1;
+	background: red;
+	transition: 500ms linear;
+}
+p{
+	padding-left:0px;
+}
+.Content{
+	padding-left: 20px;
+}

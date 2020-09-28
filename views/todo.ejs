@@ -1,0 +1,41 @@
+<%-include ("partials/header")%>
+
+<nav class="navbar navbar-light bg-light">
+    <div class="container">
+    <a class="navbar-brand" href="/">
+        <span><i class="fa fa-book"></i></span>
+        ToDo
+    </a>
+    <ul class="nav">
+        <li class="nav-item">
+            <a class="nav-link btn" href="/logout">Logout As <%= auth.username %></a>
+        </li>
+    </ul>
+    </div>
+</nav>
+
+<%-include ("partials/css")%>
+
+<div class="containe change">
+    <h1>TO-DO LIST<i class="fa fa-plus"></i></h1>
+
+    <form action="/todos" method="POST">
+        <input type="text" name="Todo" placeholder="Add New Todo">
+        <!-- <button>Submit</button> -->
+    </form>
+
+    <ul>
+        <% todo.forEach(function(td){ if(td.author.username===auth.username){%>
+            <li>
+                <form class="d-flex d-inline" action="/todo/<%=td._id%>?_method=DELETE" method="POST">
+                    <button class="btn btn-danger"><span><i class="fa fa-trash"></i></span></button>
+                    <em class="Content"><%= td.content %></em>
+                </form>
+            </li>
+        <% }}) %>
+        <!-- <a class="btn btn-danger" style="margin-top: 5px;" href="/logout">Logout</a> -->
+    </ul>
+
+</div>
+
+<%-include ("partials/footer")%>

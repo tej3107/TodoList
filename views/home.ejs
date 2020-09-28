@@ -1,0 +1,31 @@
+<!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+<%-include ("partials/header")%>
+
+<!-- Image and text -->
+
+<nav class="navbar navbar-light bg-light">
+    <div class="container">
+    <a class="navbar-brand" href="/">
+        <span><i class="fa fa-book"></i></span>
+        <!-- <img src="" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy"> -->
+        ToDo
+    </a>
+</div>
+</nav>
+
+<div class="container">
+  <div class="jumbotron">
+    <h1 class="display-4">TODO LIST</h1>
+    <hr>
+    <a class="btn btn-primary" href="/todo">todo</a>
+  </div>
+    <% if(!user){ %>
+    <a class="btn btn-secondary" href="/signup">signup</a>
+    <a class="btn btn-secondary" href="/login">login</a>
+    <% } %>
+    <% if(user){ %>
+    <a class="btn btn-secondary" href="/logOut">logOut</a>
+    <% } %>
+</div>
+
+<%-include ("partials/footer")%>

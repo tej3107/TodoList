@@ -1,0 +1,32 @@
+        <!-- <p>Hey</p> -->
+        
+        <script>
+            //To shade li
+
+            $("h1").on("click","i",function(){
+                $("input").fadeToggle(500);
+            })
+
+            $("ul").on("click","li em",function(){
+                $(this).toggleClass("shading");
+            });
+
+            // //To delete the li
+            // $("ul").on("click","span",function(event){
+            //     $(this).parent().fadeOut(1000,function(){
+            //         $(this).remove();
+            //     });
+            //     event.stopPropagation();
+            // });
+
+            // //To add li
+            // $("input").keypress(function(event){
+            //     if(event.which===13){
+            //         var inp=$(this).val();
+            //         $(this).val("");
+            //         $("ul").append("<li><span> <i class='fa fa-trash'></i></span><em class='Content'>"+inp+"</em></li>");
+            //     }
+            // });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<%-include ("partials/header")%>
+
+<style>
+    a{
+        margin-top: 5px;
+    }
+</style>
+
+<nav class="navbar navbar-light bg-light">
+    <div class="container">
+    <a class="navbar-brand" href="/">
+        <span><i class="fa fa-book"></i></span>
+        <!-- <img src="" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy"> -->
+        ToDo
+    </a>
+</div>
+</nav>
+
+<div class="container">
+        
+    <h1>Log In</h1>
+    <% if(message!=""){ %>
+    <div class="alert alert-primary" role="alert">
+        <%=message%>
+    </div>
+    <% } %>
+    <% if(suc!=""){ %>
+        <div class="alert alert-primary" role="alert">
+            <%=suc%>
+        </div>
+    <% } %>
+    <form action="/login" method="POST">
+        <input name="username" type="text" placeholder="Username" required>
+        <input name="password" type="password" placeholder="Password" required>
+        <button class="btn btn-info">Submit</button>
+    </form>
+    <% if(!user){ %>
+    <a class="btn btn-secondary" href="/signup">signup</a>
+    <% } %>
+    <% if(user){ %>
+    <a class="btn btn-secondary" href="/logOut">logOut</a>
+    <% } %>
+
+</div>
+
+<%-include ("partials/footer")%>
