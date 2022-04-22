@@ -67,6 +67,10 @@ var todoroute       = require("./routes/todoroutes"),
 app.use(todoroute);
 app.use(authroute);
 
+app.get('/jsgame',(req,res)=>{
+    res.render('tictactoe');
+})
+
 //=================================================
 
 app.listen(process.env.PORT||8080,function(){
