@@ -67,9 +67,9 @@ var todoroute       = require("./routes/todoroutes"),
 app.use(todoroute);
 app.use(authroute);
 
-app.get('/jsgame',(req,res)=>{
-    res.render('tictactoe');
-})
+app.get('/jsgame',(req,res)=>{res.render('tictactoe');})
+
+app.get('/jsgames',(req,res)=>{res.render('pingpong');})
 
 //=================================================
 
